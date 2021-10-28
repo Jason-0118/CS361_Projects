@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:arial, "Times New Roman";
+}
+
+
+
+/* article */
+
+#car1 {
+    clear:both;
+    margin: 0 auto;
+    text-align: center;
+    background-image: url("../images/models.jpg");
+    background-size: cover;
+}
+
+article .center {
+    margin: 0 auto;
+    display: block;
+    width: 1000px;
+    height: 150px;
+    margin-top: 600px;
+}
+
+.intro_button {
+    display: block;
+    border-radius: 20px;
+    background-color: rgb(49, 49, 49);
+    float: left;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 100px;
+    text-transform: uppercase;
+    color: lavenderblush;
+}
+
+
+.list_button {
+    display: block;
+    border-radius: 20px;
+    background-color: white;
+    float: right;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 100px;
+    text-transform: uppercase;
+}

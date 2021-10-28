@@ -1,0 +1,78 @@
+<%- include('commonHeader.ejs', {title: detail.name }); %>
+
+    <div class="text-center">
+        <!-- <h1>
+            <%- detail.name %>
+        </h1>
+        <p>
+            <%- detail.type %>
+        </p> -->
+
+        <img style="max-width: 1000px ;" src="<%- detail.url_img %>">
+        <a href="#">
+            <div class="btn btn-danger"> Like</div>
+        </a>
+
+        <table class="table table-sm table-bordered text-center align-middle">
+            <tbody>
+                <tr>
+                    <th>Year: </th>
+                    <td colspan="2">
+                        <%- detail.name%>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Type:</th>
+                    <td colspan="2">
+                        <%-detail.type %>
+                    </td>
+                </tr>
+                <tr>
+                    <th>mileage:</th>
+                    <td colspan="2">
+                        <%-detail.mileage %>
+                    </td>
+                </tr>
+
+                <th rowspan="<%- detail.CC.length + 1 %>">Comfort & Convenience</th>
+                <% for(let i of detail.CC) { %>
+                    <tr>
+                        <td colspan="2">
+                            <%-i %>
+                        </td>
+                    </tr>
+                    <%} %>
+
+                        <th rowspan="<%- detail.Entertainment.length + 1 %>">Entertainment</th>
+                        <% for(let i of detail.Entertainment) { %>
+                            <tr>
+                                <td colspan="2">
+                                    <%-i %>
+                                </td>
+                            </tr>
+                            <%} %>
+
+                                <th rowspan="<%- detail.Safty.length + 1 %>">Safty</th>
+                                <% for(let i of detail.Safty) { %>
+                                    <tr>
+                                        <td colspan="2">
+                                            <%-i %>
+                                        </td>
+                                    </tr>
+                                    <%} %>
+
+                                        <th rowspan="<%- detail.EE.length + 1 %>">Engine & Exterior</th>
+                                        <% for(let i of detail.EE) { %>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <%-i %>
+                                                </td>
+                                            </tr>
+                                            <%} %>
+
+    </div>
+
+
+
+
+    <%- include('commonFooter.ejs'); %>

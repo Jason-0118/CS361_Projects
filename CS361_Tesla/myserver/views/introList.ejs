@@ -1,0 +1,68 @@
+<%- include('commonHeader.ejs', {title: 'Ranking' }); %>
+
+    <div class="row mt-4 text-center">
+        <% for (let i of introList) { %>
+            <div class="col-lg-3">
+                <p>
+                    <a href="<%- i.url %>" class="btn btn-secondary bg-success">
+                        <%- i.name %> &raquo;
+                    </a>
+                </p>
+            </div>
+            <% } %>
+                <hr>
+    </div>
+    <% for(let i of introList) { %>
+        <div class="row featurette text-center mt-3">
+            <div class=" col-md-4 text-center mb-3">
+                <a href="<%- i.url %>"> <img src="<%- i.url_img %>" style="max-height: 128px ;"></a>
+            </div>
+            <div class="col-md-8  align-self-center">
+                <div class="right-content">
+                    <table id="tablecar">
+                        <p>
+                            <%- i.name %>
+                        </p>
+                        <th><a class="text-decoration-none m-1">Drive</a></th>
+                        <th><a class="text-decoration-none m-1">Comfort</a></th>
+                        <th><a class="text-decoration-none m-1">Interior</a></th>
+                        <th><a class="text-decoration-none m-1">Tech</a></th>
+                        <th><a class="text-decoration-none m-1">Storage</a></th>
+                        <th><a class="text-decoration-none m-1">Range</a></th>
+                        <th><a class="text-decoration-none m-1">Value</a></th>
+                        <th><a class="text-decoration-none m-1">Overall</a></th>
+                        <tr>
+                            <td>
+                                <%- i.rate.drive %>
+                            </td>
+                            <td>
+                                <%- i.rate.comfort %>
+                            </td>
+                            <td>
+                                <%- i.rate.int %>
+                            </td>
+                            <td>
+                                <%- i.rate.tech %>
+                            </td>
+                            <td>
+                                <%- i.rate.storage %>
+                            </td>
+                            <td>
+                                <%- i.rate.range %>
+                            </td>
+                            <td>
+                                <%- i.rate.value %>
+                            </td>
+                            <td>
+                                <%- i.rate.overall %>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <%}%>
+
+
+
+            <%- include('commonFooter.ejs'); %>

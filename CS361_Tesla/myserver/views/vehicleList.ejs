@@ -1,0 +1,46 @@
+<%- include('commonHeader.ejs', {title: "All" }); %>
+    <div class="row mt-4 text-center">
+        <% for (let i of introList) { %>
+            <div class="col-lg-3">
+                <p>
+                    <a href="<%- i.url %>" class="btn btn-secondary bg-success">
+                        <%- i.name %> &raquo;
+                    </a>
+                </p>
+            </div>
+            <% } %>
+                <hr>
+    </div>
+    <h1 class="text-center">All Vehicles</h1>
+
+    <table class="table table-sm table-bordered text-center">
+        <tbody>
+            <% for(let i of vehicleList) { %>
+                <tr>
+                    <th rowspan="4" style="vertical-align: middle;"> <a href="<%- i.detail %>"><img
+                                style="max-height: 400px ;" src="<%- i.url_img %>"></th></a>
+                    <td>
+                        <%- i.name%>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <%- i.type %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <%- i.mileage %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <%- i.title %>
+                    </td>
+                </tr>
+                <%} %>
+        </tbody>
+
+
+
+        <%- include('commonFooter.ejs'); %>
